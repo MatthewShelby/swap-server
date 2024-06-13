@@ -4,7 +4,7 @@ Welcome to Swap, a platform dedicated to simplifying crypto swaps.
 
 This repository contains the  the Node JS server app handling SWAP transaction calls.
 
-The app in this repo is deployed on a ubuntu 20.4 VPS.
+The app in this repo is deployed on a ubuntu Server.
 
 ## Overview
 
