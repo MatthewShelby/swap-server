@@ -102,6 +102,7 @@ function toFixed(x) {
 
 // ========== Check Availability
 app.get("/health", async (req, res) => {
+console.log('health: '+req.header)
   return res.status(200).json({
     status: "success"
   });
