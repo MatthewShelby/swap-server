@@ -17,7 +17,7 @@ var acceptedUrl = process.env.aurl
 //app.use(cors()); 
 app.use(function (req, res, next) {
   console.log(' aurl from env: ' + acceptedUrl)
-  console.log( req.header() )
+  console.log( req.body)
   res.header("Access-Control-Allow-Origin", acceptedUrl);
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
