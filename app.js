@@ -16,11 +16,13 @@ var acceptedUrl = process.env.aurl
 
 //app.use(cors()); 
 app.use(function (req, res, next) {
+  console.log(' aurl from env: ' + acceptedUrl)
+  console.log( req.header() )
   res.header("Access-Control-Allow-Origin", acceptedUrl);
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
-const port = process.env.PORT || 3004;
+const port = process.env.PORT || 3003;
   
 
 const affAdd = '0xc8F01FA38D6A53f6D4184e63d15C0c8a322FFa02'
@@ -102,7 +104,7 @@ function toFixed(x) {
 
 // ========== Check Availability
 app.get("/health", async (req, res) => {
-console.log('health: '+req.header)
+console.log('health has been called')
   return res.status(200).json({
     status: "success"
   });
